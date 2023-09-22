@@ -11,7 +11,7 @@ module.exports = {
 				innerCustom: "inset 0 0 5px black",
 				outerCustom: "0 0 10px 1000px rgba(0,0,0,.5)",
 				normalButton: "0 0 10px black",
-				pressedButton: "0 0 10px black",
+				pressedButton: "0 0 5px rgba(0,0,0,.5)",
 			},
 		},
 	},

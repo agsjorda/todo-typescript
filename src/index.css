@@ -22,4 +22,30 @@
     align-items: center;
     font-family: "Neucha", cursive;
   }
+
+  /* .container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+  } */
+
+  .todos{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: rgb(58, 189, 198);
+  }
+
+  .todos__heading{
+    font-size: 30px;
+    color: white;
+  }
+
+  .remove {
+    background-color: rgb(232, 83, 83);
+  }
 }
