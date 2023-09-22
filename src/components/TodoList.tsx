@@ -19,9 +19,11 @@ const TodoList = ({
 	return (
 		<div className="container flex flex-start flex-col justify-between py-4 w-[95%] md:w-full md:flex-row">
 			<Droppable droppableId="TodosList">
-				{(provided) => (
+				{(provided, snapshot) => (
 					<div
-						className="todos md:w-[47.5%]"
+						className={`todos md:w-[47.5%] ${
+							snapshot.isDraggingOver ? "dragactive" : ""
+						}`}
 						ref={provided.innerRef}
 						{...provided.droppableProps}
 					>
@@ -40,9 +42,11 @@ const TodoList = ({
 				)}
 			</Droppable>
 			<Droppable droppableId="TodosRemove">
-				{(provided) => (
+				{(provided, snapshot) => (
 					<div
-						className="todos remove md:w-[47.5%]"
+						className={`todos remove md:w-[47.5%] ${
+							snapshot.isDraggingOver ? "dragcomplete" : ""
+						}`}
 						ref={provided.innerRef}
 						{...provided.droppableProps}
 					>
