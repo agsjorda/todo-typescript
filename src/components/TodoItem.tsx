@@ -46,9 +46,11 @@ const TodoItem = ({ index, todo, todos, setTodos }: Props) => {
 
 	return (
 		<Draggable draggableId={todo.id.toString()} index={index}>
-			{(provided) => (
+			{(provided, snapshot) => (
 				<form
-					className="flex bg-slate-200  rounded-[5px] p-5 mt-4 transition-all duration-200 hover:scale-[1.02] hover:shadow-pressedButton"
+					className={`${
+						snapshot.isDragging ? "drag" : ""
+					}flex bg-slate-200  rounded-[5px] p-5 mt-4 transition-all duration-200 hover:scale-[1.02] hover:shadow-pressedButton`}
 					onSubmit={(e) => handleEdit(e, todo.id)}
 					{...provided.draggableProps}
 					{...provided.dragHandleProps}
